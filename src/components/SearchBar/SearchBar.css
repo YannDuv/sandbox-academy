@@ -1,0 +1,44 @@
+.search-movies {
+    display: flex;
+    flex-direction: column;
+}
+
+div.search{
+    display: flex;
+    flex-direction: row;
+}
+
+div.search input[type="text"]{
+    flex: 1;
+    height: 50px;
+    padding-left: 35px;
+}
+
+ul.movies {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style: none;
+    flex: 1;
+}
+
+li.movie{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 220px;
+    min-height: 450px;
+}
+
+div.title{
+    padding: 0 5px;
+}
+
+div.poster{
+    display: flex;
+    align-items: flex-end;
+}
+
+div.poster img{
+    max-height: 338px; 
+    overflow: hidden;
+}
