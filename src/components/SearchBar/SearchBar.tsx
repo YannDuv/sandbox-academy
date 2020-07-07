@@ -1,7 +1,7 @@
 import React from "react";
 import "./SearchBar.css";
 
-const apiKey="48b534fe060c24f5e13c3a91337f612d";
+const apiKey="insert your key here";
 
 type Movie = {
   id: string;
