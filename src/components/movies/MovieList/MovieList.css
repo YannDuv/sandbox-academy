@@ -17,12 +17,7 @@ figure.movie{
     padding: 0 5px;
 }
 
-div.poster{
-    display: flex;
-    align-items: flex-end;
-}
-
-div.poster img{
+img.poster{
     max-height: 338px; 
-    overflow: hidden;
+    object-fit: cover;
 }

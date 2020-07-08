@@ -1,8 +1,8 @@
 import React from "react";
 import "./SearchBar.css";
-import { Movie } from "../../../types/Movie";
+import { Movie } from "../../../store/movies/types";
 
-const apiKey="insert your key here";
+const apiKey="48b534fe060c24f5e13c3a91337f612d";
 
 type IProps = {
   onChange: (movies: Movie[]) => void;

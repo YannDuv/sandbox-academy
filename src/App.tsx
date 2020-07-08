@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import { SearchBar } from './components/movies/SearchBar/SearchBar';
 import { MovieList } from './components/movies/MovieList/MovieList';
-import { Movie } from "./types/Movie";
+import { Movie } from './store/movies/types';
 
 function App() {
   const [movies, setMovies] = React.useState<Array<Movie>>([]);
