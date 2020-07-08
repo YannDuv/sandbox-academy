@@ -1,0 +1,15 @@
+.search-movies {
+    display: flex;
+    flex-direction: column;
+}
+
+form.search{
+    display: flex;
+    flex-direction: row;
+}
+
+form.search input[type="text"]{
+    flex: 1;
+    height: 50px;
+    padding-left: 35px;
+}
