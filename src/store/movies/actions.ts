@@ -1,17 +1,8 @@
-import { Movie, ADD_MOVIE, REMOVE_MOVIE, MoviesActionTypes } from './types'
+import { Movie, UPDATE_MOVIES, MoviesActionTypes } from './types'
 
-export function addMovie(newMovie: Movie): MoviesActionTypes {
+export function updateMovies(newMovies: Movie[]): MoviesActionTypes {
   return {
-    type: ADD_MOVIE,
-    payload: newMovie
-  }
-}
-
-export function removeMovie(id: string): MoviesActionTypes {
-  return {
-    type: REMOVE_MOVIE,
-    meta: {
-      id
-    }
+    type: UPDATE_MOVIES,
+    payload: newMovies
   }
 }

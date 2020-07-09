@@ -1,7 +1,7 @@
-import { MoviesState,MoviesActionTypes, ADD_MOVIE, REMOVE_MOVIE } from "./types"
+import { MoviesState,MoviesActionTypes, UPDATE_MOVIES } from "./types"
 
 const initialState: MoviesState = {
-    movies: []
+    movies: [],
 }
 
 export function MoviesReducer(
@@ -9,15 +9,9 @@ export function MoviesReducer(
     action: MoviesActionTypes
 ): MoviesState {
     switch (action.type) {
-        case ADD_MOVIE:
+        case UPDATE_MOVIES:
             return {
-                movies: [...state.movies, action.payload]
-            }
-        case REMOVE_MOVIE:
-            return {
-                movies: state.movies.filter(
-                movie => movie.id !== action.meta.id
-                )
+                movies: action.payload
             }
         default:
             return state

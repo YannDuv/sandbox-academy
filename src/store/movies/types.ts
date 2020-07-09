@@ -8,19 +8,11 @@ export interface MoviesState {
     movies: Movie[]
 }
 
-export const ADD_MOVIE = 'ADD_MOVIE'
-export const REMOVE_MOVIE = 'REMOVE_MOVIE'
+export const UPDATE_MOVIES = 'UPDATE_MOVIES'
 
-interface AddMovieAction {
-  type: typeof ADD_MOVIE;
-  payload: Movie;
+interface UpdateMoviesAction {
+  type: typeof UPDATE_MOVIES;
+  payload: Movie[];
 }
 
-interface RemoveMovieAction {
-  type: typeof REMOVE_MOVIE;
-  meta: {
-    id: string;
-  }
-}
-
-export type MoviesActionTypes = AddMovieAction | RemoveMovieAction
+export type MoviesActionTypes = UpdateMoviesAction

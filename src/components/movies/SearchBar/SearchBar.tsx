@@ -1,20 +1,16 @@
 import React from "react";
 import "./SearchBar.css";
-import { Movie } from "../../../store/movies/types";
+import { updateMovies } from "../../../store/movies/actions";
+import { store } from "../../../store";
 
-const apiKey="48b534fe060c24f5e13c3a91337f612d";
-
-type IProps = {
-  onChange: (movies: Movie[]) => void;
-}
+const apiKey="insert your key here";
 
 function getMovies( key: string, keyword: string) {
   return fetch(`https://api.themoviedb.org/3/search/movie?api_key=${key}&language=en-US&page=1&include_adult=false&query=${keyword}`)
     .then((response) => response.json()).then((json) => json.results);
 }
 
-export const SearchBar = ({ onChange }: IProps) => {
-
+export const SearchBar = () => {
   const [searchKey, setSearchKey] = React.useState<string>("");
 
   function handleChange(e: React.FormEvent<HTMLInputElement>) {
@@ -33,7 +29,8 @@ export const SearchBar = ({ onChange }: IProps) => {
   }
 
   function fetchMovies(){
-    getMovies(apiKey,searchKey).then((result) =>onChange(result))
+    getMovies(apiKey,searchKey)
+    .then((result) =>store.dispatch(updateMovies(result)))
     .catch((err) => {
       console.error(`Failed to recover movies using DMDB API due to error : ${err}`);
     });
