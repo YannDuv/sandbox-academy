@@ -32,7 +32,7 @@ export const SearchBar = () => {
   
   return (
       <form className="search" onSubmit={handleSubmit}>
-        <input type="text" value={searchKey} onChange={handleChange} placeholder="Insert your movie title here."/>
+        <input aria-label="Search" type="text" value={searchKey} onChange={handleChange} placeholder="Insert your movie title here."/>
         <button type="submit">
           search
         </button>
