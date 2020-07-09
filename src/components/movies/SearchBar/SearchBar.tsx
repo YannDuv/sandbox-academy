@@ -22,12 +22,6 @@ export const SearchBar = () => {
     e.preventDefault();
   }
 
-  function handleKeyDown(e: React.KeyboardEvent<HTMLInputElement>) {
-    if(e.key === 'Enter'){
-      fetchMovies();
-    }
-  }
-
   function fetchMovies(){
     getMovies(apiKey,searchKey)
     .then((result) =>store.dispatch(updateMovies(result)))
