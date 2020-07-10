@@ -1,26 +1,14 @@
 import React from "react";
 import "./MovieList.css";
 import { Movie } from "../../../store/movies/types";
-import { RootState, store } from "../../../store";
+import { connect } from 'react-redux';
+import { RootState } from '../../../store';
 
-function select(state: RootState) {
-  return state.moviesState.movies;
-}
+type IProps ={
+  movies: Movie[],
+};
 
-export const MovieList = () => {
-  const [movies, setMovies] = React.useState<Movie[]>([]);
-  
-  function handleChange() {
-    let newMovies: Movie[] = select(store.getState())
-
-    if (newMovies.filter(item => movies.indexOf(item) < 0).length > 0) {
-      setMovies(newMovies);
-    }
-    
-  }
-  
-  store.subscribe(handleChange);
-  
+let MovieList = ({movies}: IProps) => {
   return (
     <ul className="movies">
         {movies.map((movie) => {
@@ -34,3 +22,13 @@ export const MovieList = () => {
       </ul>
   );
 };
+
+const getMovies = (state: RootState) => state.moviesState.movies;
+
+const mapStateToProps = (state: RootState) => {
+  return {
+    movies: getMovies(state),
+  }
+}
+
+export default connect(mapStateToProps)(MovieList);

@@ -1,16 +1,16 @@
 import React from "react";
 import "./SearchBar.css";
 import { updateMovies } from "../../../store/movies/actions";
-import { store } from "../../../store";
+import { connect } from 'react-redux';
 
-const apiKey="insert your key here";
+const apiKey="insert your key here ...";
 
 function getMovies( key: string, keyword: string) {
   return fetch(`https://api.themoviedb.org/3/search/movie?api_key=${key}&language=en-US&page=1&include_adult=false&query=${keyword}`)
     .then((response) => response.json()).then((json) => json.results);
 }
 
-export const SearchBar = () => {
+let SearchBar = ({ dispatch }: any) => {
   const [searchKey, setSearchKey] = React.useState<string>("");
 
   function handleChange(e: React.FormEvent<HTMLInputElement>) {
@@ -24,7 +24,7 @@ export const SearchBar = () => {
 
   function fetchMovies(){
     getMovies(apiKey,searchKey)
-    .then((result) =>store.dispatch(updateMovies(result)))
+    .then((result) =>dispatch(updateMovies(result)))
     .catch((err) => {
       console.error(`Failed to recover movies using DMDB API due to error : ${err}`);
     });
@@ -39,3 +39,5 @@ export const SearchBar = () => {
       </form>
   );
 };
+
+export default connect()(SearchBar);
