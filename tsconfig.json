@@ -6,6 +6,9 @@
       "dom.iterable",
       "esnext"
     ],
+    "typeRoots": [
+      "node_modules/@types"
+    ],
     "importHelpers": true,
     "removeComments": true,
     "allowJs": true,

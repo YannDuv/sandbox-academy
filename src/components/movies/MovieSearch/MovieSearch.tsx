@@ -1,16 +1,15 @@
 import React from "react";
-import "./SearchBar.css";
+import "./MovieSearch.css";
 import { updateMovies } from "../../../store/movies/actions";
 import { connect } from 'react-redux';
-
-const apiKey="insert your key here ...";
+import { apiKey } from '../../../utils/api-key';
 
 function getMovies( key: string, keyword: string) {
   return fetch(`https://api.themoviedb.org/3/search/movie?api_key=${key}&language=en-US&page=1&include_adult=false&query=${keyword}`)
     .then((response) => response.json()).then((json) => json.results);
 }
 
-let SearchBar = ({ dispatch }: any) => {
+let MovieSearch = ({ dispatch }: any) => {
   const [searchKey, setSearchKey] = React.useState<string>("");
 
   function handleChange(e: React.FormEvent<HTMLInputElement>) {
@@ -40,4 +39,4 @@ let SearchBar = ({ dispatch }: any) => {
   );
 };
 
-export default connect()(SearchBar);
+export default connect()(MovieSearch);
