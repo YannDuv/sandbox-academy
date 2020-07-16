@@ -43,3 +43,14 @@ form legend {
 ul {
   padding-left: var(--space-none);
 }
+
+figure {
+  margin: var(--space-none);
+  padding: var(--space-none);
+}
+
+.movie-search {
+  .movie-keyword {
+    padding: var(--space-xxs) var(--space-xs);
+  }
+}

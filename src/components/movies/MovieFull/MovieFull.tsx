@@ -40,7 +40,7 @@ function MovieFull({ movie }: IProps) {
         />
         <div className="movie-description">{movie.overview}</div>
       </div>
-      <ul className="alternate-movie-list">
+      <ul className="alternate-movies-list">
         {alternateMovies &&
           alternateMovies.map((movie: Movie) => {
             return (

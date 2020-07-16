@@ -1,0 +1,58 @@
+$gap-horizontal: 10px;
+$gap-vertical: $gap-horizontal;
+
+@mixin grid {
+  // fallback for IE
+  &::before,
+  &::after {
+    content: "";
+    display: table;
+  }
+
+  &::after {
+    clear: both;
+  }
+
+  > * {
+    float: left;
+    margin-right: $gap-horizontal;
+    margin-bottom: $gap-vertical;
+  }
+
+  @supports (grid-area: auto) {
+    //CSS Grid style
+    display: grid;
+    grid-column-gap: $gap-horizontal;
+    grid-row-gap: $gap-vertical;
+
+    &::after,
+    &::before {
+      content: none;
+    }
+
+    > * {
+      margin-right: 0;
+      margin-bottom: 0;
+    }
+  }
+}
+
+@mixin gridAuto($min-width, $fallback: 3) {
+  > * {
+    float: left;
+    width: calc(100% /#{$fallback} - #{$gap-horizontal});
+
+    &:nth-child(#{$fallback}n + 1) {
+      clear: both;
+    }
+  }
+
+  @supports (grid-area: auto) {
+    grid-template-columns: repeat(auto-fit, minmax($min-width, 1fr));
+
+    > * {
+      width: auto;
+      margin: 0;
+    }
+  }
+}

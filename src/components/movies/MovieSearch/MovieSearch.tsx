@@ -34,13 +34,14 @@ const MovieSearch = ({ dispatch }: any) => {
   }
 
   return (
-    <form className="search" onSubmit={handleSubmit}>
+    <form className="movie-search" onSubmit={handleSubmit}>
       <input
         aria-label="Search"
         type="text"
         value={searchKey}
         onChange={handleChange}
         placeholder="Insert your movie title here."
+        className="movie-keyword"
       />
       <button type="submit">search</button>
     </form>

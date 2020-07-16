@@ -5,11 +5,16 @@
 @import "base/spacing";
 @import "base/colors";
 
+/* FRAMEWORK:
+========================================================================== */
+
+@import "framework/_grid.scss";
+
 /* COMPONENTS:
 ========================================================================== */
 
 @import "components/movies/MovieFull/movieFull";
-@import "components/movies/MovieList/movieList.scss";
+@import "components/movies/MovieGrid/movieGrid";
 @import "components/movies/MovieSearch/movieSearch.scss";
 @import "components/movies/MovieShort/movieShort.scss";
 

@@ -1,0 +1,4 @@
+.movies-grid {
+  @include grid;
+  @include gridAuto(150px);
+}

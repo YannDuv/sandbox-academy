@@ -9,13 +9,13 @@ type IProps = {
 function MovieShort({ movie }: IProps) {
   return (
     <Link to={`/q=${movie.id}`}>
-      <figure className="movie">
+      <figure className="movie-short">
         <img
           src={`https://image.tmdb.org/t/p/w154/${movie.poster_path}`}
-          className="poster"
-          alt=""
+          className="movie-thumbnail"
+          alt={movie.title}
         />
-        <figcaption className="title">{movie.title}</figcaption>
+        <figcaption className="movie-caption">{movie.title}</figcaption>
       </figure>
     </Link>
   );

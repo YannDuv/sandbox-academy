@@ -82,10 +82,12 @@ p {
   line-height: var(--body-line-height);
 }
 
-a {
-  text-decoration: none;
-}
-
 code {
   font-family: var(--font-debug);
+}
+
+.movie-short {
+  .movie-caption {
+    font-size: var(--text-sm);
+  }
 }

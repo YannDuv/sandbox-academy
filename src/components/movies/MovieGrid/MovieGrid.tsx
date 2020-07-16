@@ -9,9 +9,9 @@ type IProps = {
   movies: Movie[];
 };
 
-const MovieList = ({ movies }: IProps) => {
+const MovieGrid = ({ movies }: IProps) => {
   return (
-    <ul className="movies">
+    <ul className="movies-grid">
       {movies &&
         movies.map((movie) => {
           return (
@@ -30,4 +30,4 @@ const mapStateToProps = (state: RootState) => {
   };
 };
 
-export default connect(mapStateToProps)(MovieList);
+export default connect(mapStateToProps)(MovieGrid);
