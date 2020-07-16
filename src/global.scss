@@ -1,0 +1,20 @@
+/* GLOBAL:
+========================================================================== */
+@import "base/reset";
+@import "base/typography";
+@import "base/spacing";
+@import "base/colors";
+
+/* COMPONENTS:
+========================================================================== */
+
+@import "components/movies/MovieFull/movieFull";
+@import "components/movies/MovieList/movieList.scss";
+@import "components/movies/MovieSearch/movieSearch.scss";
+@import "components/movies/MovieShort/movieShort.scss";
+
+/* PAGES:
+========================================================================== */
+
+@import "pages/MoviePage/moviePage";
+@import "pages/MoviesPage/moviesPage";

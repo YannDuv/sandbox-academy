@@ -1,5 +1,4 @@
 import React from "react";
-import "./MovieSearch.css";
 import { updateMovies } from "../../../store/movies/actions";
 import { connect } from "react-redux";
 import { apiKey } from "../../../utils/api-key";

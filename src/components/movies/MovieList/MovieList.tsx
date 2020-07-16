@@ -1,5 +1,4 @@
 import React from "react";
-import "./MovieList.css";
 import { Movie } from "../../../store/movies/types";
 import { connect } from "react-redux";
 import { RootState } from "../../../store";

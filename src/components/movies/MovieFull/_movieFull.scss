@@ -7,11 +7,6 @@
   display: flex;
   flex-direction: row;
   align-content: space-between;
-  padding: 0 15px;
-}
-
-.movie-description {
-  padding: 0 15px;
 }
 
 .alternate-movie-list {
@@ -20,8 +15,6 @@
   width: 100vw;
   overflow-x: auto;
   max-width: 100%;
-  margin: 0;
-  padding: 0;
 }
 
 .movie-item {

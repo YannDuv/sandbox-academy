@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import "./MovieFull.css";
 import { Movie } from "../../../store/movies/types";
 import MovieShort from "../MovieShort/MovieShort";
 import { apiKey } from "../../../utils/api-key";

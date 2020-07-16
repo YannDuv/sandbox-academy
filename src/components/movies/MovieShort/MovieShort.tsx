@@ -1,5 +1,4 @@
 import React from "react";
-import "./MovieShort.css";
 import { Movie } from "../../../store/movies/types";
 import { Link } from "react-router-dom";
 

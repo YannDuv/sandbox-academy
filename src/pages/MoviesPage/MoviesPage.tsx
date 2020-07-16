@@ -1,5 +1,4 @@
 import React from "react";
-import "./MoviesPage.css";
 import MovieList from "../../components/movies/MovieList/MovieList";
 import MovieSearch from "../../components/movies/MovieSearch/MovieSearch";
 

@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import "./MoviePage.css";
 import { Link } from "react-router-dom";
 import { Movie } from "../../store/movies/types";
 import MovieFull from "../../components/movies/MovieFull/MovieFull";
