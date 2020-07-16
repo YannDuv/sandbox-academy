@@ -1,7 +1,7 @@
 class Logger {
-    log(message: string): void {
-        console.log(message)
-    }
+  log(message: string): void {
+    console.log(message);
+  }
 }
 
-export const LoggerService = new Logger()
+export const LoggerService = new Logger();

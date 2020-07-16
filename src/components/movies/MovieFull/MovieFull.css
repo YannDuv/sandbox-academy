@@ -1,29 +1,29 @@
-.movie-full{
-    display: flex;
-    flex-direction: column;
+.movie-full {
+  display: flex;
+  flex-direction: column;
 }
 
-.movie-info{
-    display: flex;
-    flex-direction: row;
-    align-content: space-between;
-    padding: 0 15px;
+.movie-info {
+  display: flex;
+  flex-direction: row;
+  align-content: space-between;
+  padding: 0 15px;
 }
 
-.movie-info cite{
-    padding: 0 15px;
+.movie-description {
+  padding: 0 15px;
 }
 
-.alternate-movie-list{
-    display: flex;
-    list-style: none;
-    width: 100vw;
-    overflow-x: auto;
-    max-width: 100%;
-    margin: 0;
-    padding: 0;
+.alternate-movie-list {
+  display: flex;
+  list-style: none;
+  width: 100vw;
+  overflow-x: auto;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
-.movie-item{
-    flex-direction: row;
+.movie-item {
+  flex-direction: row;
 }

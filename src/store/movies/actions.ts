@@ -1,8 +1,8 @@
-import { Movie, UPDATE_MOVIES, MoviesActionTypes } from './types'
+import { Movie, UPDATE_MOVIES, MoviesActionTypes } from "./types";
 
 export function updateMovies(newMovies: Movie[]): MoviesActionTypes {
   return {
     type: UPDATE_MOVIES,
-    payload: newMovies
-  }
+    payload: newMovies,
+  };
 }

@@ -1,15 +1,18 @@
 import React from "react";
 import "./MovieSearch.css";
 import { updateMovies } from "../../../store/movies/actions";
-import { connect } from 'react-redux';
-import { apiKey } from '../../../utils/api-key';
+import { connect } from "react-redux";
+import { apiKey } from "../../../utils/api-key";
 
-function getMovies( key: string, keyword: string) {
-  return fetch(`https://api.themoviedb.org/3/search/movie?api_key=${key}&language=en-US&page=1&include_adult=false&query=${keyword}`)
-    .then((response) => response.json()).then((json) => json.results);
+function getMovies(key: string, keyword: string) {
+  return fetch(
+    `https://api.themoviedb.org/3/search/movie?api_key=${key}&language=en-US&page=1&include_adult=false&query=${keyword}`
+  )
+    .then((response) => response.json())
+    .then((json) => json.results);
 }
 
-let MovieSearch = ({ dispatch }: any) => {
+const MovieSearch = ({ dispatch }: any) => {
   const [searchKey, setSearchKey] = React.useState<string>("");
 
   function handleChange(e: React.FormEvent<HTMLInputElement>) {
@@ -21,21 +24,27 @@ let MovieSearch = ({ dispatch }: any) => {
     e.preventDefault();
   }
 
-  function fetchMovies(){
-    getMovies(apiKey,searchKey)
-    .then((result) =>dispatch(updateMovies(result)))
-    .catch((err) => {
-      console.error(`Failed to recover movies using DMDB API due to error : ${err}`);
-    });
+  function fetchMovies() {
+    getMovies(apiKey, searchKey)
+      .then((result) => dispatch(updateMovies(result)))
+      .catch((err) => {
+        console.error(
+          `Failed to recover movies using DMDB API due to error : ${err}`
+        );
+      });
   }
-  
+
   return (
-      <form className="search" onSubmit={handleSubmit}>
-        <input aria-label="Search" type="text" value={searchKey} onChange={handleChange} placeholder="Insert your movie title here."/>
-        <button type="submit">
-          search
-        </button>
-      </form>
+    <form className="search" onSubmit={handleSubmit}>
+      <input
+        aria-label="Search"
+        type="text"
+        value={searchKey}
+        onChange={handleChange}
+        placeholder="Insert your movie title here."
+      />
+      <button type="submit">search</button>
+    </form>
   );
 };
 
