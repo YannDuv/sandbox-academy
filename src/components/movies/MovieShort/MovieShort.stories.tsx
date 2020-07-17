@@ -1,13 +1,13 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import MovieFull from "./MovieFull";
+import MovieShort from "./MovieShort";
 
-storiesOf("MovieFull", module)
+storiesOf("MovieShort", module)
   .add("empty movie", () => (
-    <MovieFull movie={{ id: 0, title: "", poster_path: "", overview: "" }} />
+    <MovieShort movie={{ id: 0, title: "", poster_path: "", overview: "" }} />
   ))
   .add("star wars", () => (
-    <MovieFull
+    <MovieShort
       movie={{
         id: 11,
         title: "Star wars",
