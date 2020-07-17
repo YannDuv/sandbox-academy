@@ -3,6 +3,7 @@ import { storiesOf } from "@storybook/react";
 import { Provider } from "react-redux";
 import { createStore } from "redux";
 import { rootReducer, composeEnhancers } from "../../../store";
+import "../../../index.scss";
 import MovieFull from "./MovieFull";
 
 const store = createStore(rootReducer, composeEnhancers());

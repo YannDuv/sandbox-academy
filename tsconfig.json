@@ -1,14 +1,8 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
-    "typeRoots": [
-      "node_modules/@types"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "typeRoots": ["node_modules/@types", "src/typings"],
     "importHelpers": true,
     "removeComments": true,
     "allowJs": true,
@@ -24,7 +18,5 @@
     "noEmit": true,
     "jsx": "react"
   },
-  "include": [
-    "src"
-  ]
+  "include": ["src"]
 }
