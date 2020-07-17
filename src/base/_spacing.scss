@@ -1,5 +1,6 @@
 :root {
   /* spacing values */
+  --space-centered: 0 auto;
   --space-none: 0;
   --space-xxxs: 0.25em;
   --space-xxs: 0.375em;
@@ -44,13 +45,12 @@ ul {
   padding-left: var(--space-none);
 }
 
-figure {
-  margin: var(--space-none);
-  padding: var(--space-none);
-}
-
 .movie-search {
   .movie-keyword {
     padding: var(--space-xxs) var(--space-xs);
   }
+}
+
+.movie-short {
+  margin: var(--space-centered);
 }

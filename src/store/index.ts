@@ -1,5 +1,5 @@
 import { MoviesReducer } from "./movies/reducers";
-import { combineReducers, createStore } from "redux";
+import { combineReducers } from "redux";
 import { composeWithDevTools } from "redux-devtools-extension";
 
 export const rootReducer = combineReducers({
@@ -8,7 +8,7 @@ export const rootReducer = combineReducers({
 
 export type RootState = ReturnType<typeof rootReducer>;
 
-const composeEnhancers = composeWithDevTools({
+export const composeEnhancers = composeWithDevTools({
   features: {
     pause: true, // start/pause recording of dispatched actions
     lock: true, // lock/unlock dispatching actions and side effects
@@ -19,5 +19,3 @@ const composeEnhancers = composeWithDevTools({
     dispatch: true, // dispatch custom actions or action creators
   },
 });
-
-export const store = createStore(rootReducer, composeEnhancers());
