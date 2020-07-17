@@ -3,10 +3,10 @@ import { storiesOf } from "@storybook/react";
 import MovieFull from "./MovieFull";
 
 storiesOf("MovieFull", module)
-  .add("empty movie", () => (
+  .add("empty movie loaded", () => (
     <MovieFull movie={{ id: 0, title: "", poster_path: "", overview: "" }} />
   ))
-  .add("star wars", () => (
+  .add("one movie loaded", () => (
     <MovieFull
       movie={{
         id: 11,
